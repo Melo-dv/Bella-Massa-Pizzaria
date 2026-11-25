@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bella Massa Pizzaria — Pizza artesanal, entregue quente</title>
+  <meta name="description" content="Pizzas artesanais, massa de longa fermentação e forno a lenha. Peça online com entrega ou retirada.">
+  <meta name="theme-color" content="#c8321e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-in">
+    <a href="#inicio" class="brand" aria-label="Início">
+      <span class="brand-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3C7 3 3.5 5.2 2 7.5L12 21l10-13.5C20.500 5.200 17 3 12 3Z"/><circle cx="10" cy="9" r="1.3" fill="#fff"/><circle cx="14.500" cy="11" r="1.3" fill="#fff"/><circle cx="11.500" cy="14" r="1.3" fill="#fff"/></svg>
+      </span>
+      <span data-store-name>Bella Massa Pizzaria</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#bebidas">Bebidas</a>
+      <a href="#historia">Nossa história</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-ghost" id="btnAccount" aria-label="Minha conta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.500-6 8-6s8 2 8 6"/></svg>
+        <span id="btnAccountLabel">Entrar</span>
+      </button>
+      <button class="btn btn-cart" id="btnCart" aria-label="Abrir carrinho">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.500 11h11L21 7H6"/><circle cx="9" cy="20" r="1.500"/><circle cx="18" cy="20" r="1.500"/></svg>
+        <span class="lbl">Carrinho</span> <span class="badge" id="cartCount" hidden>0</span>
+      </button>
+      <button class="btn btn-ghost" id="btnHistory" aria-label="Histórico de pedidos" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span class="lbl">Histórico</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ INÍCIO (HERO) ============ -->
+<section class="hero" id="inicio">
+  <div class="container hero-in">
+    <div>
+      <span class="eyebrow">Forno a lenha · Massa de 48h</span>
+      <h1>A pizza que chega <em>quentinha</em> e do jeito que você ama.</h1>
+      <p class="lead">Ingredientes frescos, massa artesanal de longa fermentação e muito queijo. Peça pelo site e escolha entrega ou retirada.</p>
+      <div class="hero-cta">
+        <a href="#cardapio" class="btn btn-gold">Ver cardápio</a>
+        <button class="btn btn-light" id="heroCart">Abrir carrinho</button>
+      </div>
+      <div class="hero-meta">
+        <span>🕕 <span data-s="hours">—</span></span>
+        <span>🛵 Taxa de entrega <b data-s="deliveryFee">—</b></span>
+      </div>
+    </div>
+
+    <div class="pizza-stage" aria-label="Pizza com fatias em movimento">
+      <div class="pizza-spin" id="heroPizza"></div>
+      <svg class="floater f1" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3C32 8 34 26 20 37C6 26 8 8 20 3Z" fill="#3f9a3a"/><path d="M20 6V34" stroke="#2a6a27" stroke-width="1.500"/></svg>
+      <svg class="floater f2" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="15" fill="#d8402b"/><circle cx="15" cy="16" r="4" fill="#f27a65" opacity=".7"/><path d="M20 8l-5-4 5 2 5-2z M14 9l6 2 6-2" fill="#3f9a3a" stroke="#3f9a3a"/></svg>
+      <svg class="floater f3" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3C32 8 34 26 20 37C6 26 8 8 20 3Z" fill="#4aa844"/><path d="M20 6V34" stroke="#2a6a27" stroke-width="1.500"/></svg>
+      <svg class="floater f4" viewBox="0 0 40 40" aria-hidden="true"><ellipse cx="20" cy="20" rx="12" ry="15" fill="#262626"/><ellipse cx="20" cy="20" rx="4.500" ry="6" fill="#f3d67a"/></svg>
+      <svg class="floater f5" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="#efe3f3" stroke-width="4"/></svg>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C240 80 480 0 720 30S1200 80 1440 30V80H0Z" fill="#fffdf9"/></svg>
+</section>
+
+<div class="perks container">
+  <div class="perks-grid">
+    <div class="perk reveal"><span class="ico">🌾</span><div><b>Massa de 48 horas</b><span>Fermentação lenta para uma massa leve e crocante.</span></div></div>
+    <div class="perk reveal"><span class="ico">🔥</span><div><b>Forno a lenha</b><span>Borda dourada e aquele sabor inconfundível.</span></div></div>
+    <div class="perk reveal"><span class="ico">🛵</span><div><b>Entrega ou retirada</b><span>Você escolhe e acompanha o pedido pelo site.</span></div></div>
+  </div>
+</div>
+
+<!-- ============ CARDÁPIO ============ -->
+<section class="section" id="cardapio">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Cardápio</span>
+      <h2 class="sec-title">Escolha sua pizza</h2>
+      <p class="sec-sub">Do tradicional ao especial, sempre com ingredientes frescos. Escolha o tamanho e adicione ao carrinho.</p>
+    </div>
+    <div class="filters" id="menuFilters" role="tablist" aria-label="Categorias">
+      <button class="chip active" data-filter="Todas">Todas</button>
+      <button class="chip" data-filter="Tradicionais">Tradicionais</button>
+      <button class="chip" data-filter="Especiais">Especiais</button>
+      <button class="chip" data-filter="Doces">Doces</button>
+    </div>
+    <div class="grid" id="pizzaGrid"></div>
+  </div>
+</section>
+
+<!-- ============ BEBIDAS ============ -->
+<section class="section" id="bebidas">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Para acompanhar</span>
+      <h2 class="sec-title">Bebidas geladinhas</h2>
+      <p class="sec-sub">Refrigerantes, suco e água sempre bem gelados.</p>
+    </div>
+    <div class="grid" id="drinkGrid"></div>
+  </div>
+</section>
+
+<!-- ============ NOSSA HISTÓRIA ============ -->
+<section class="story" id="historia">
+  <div class="container story-grid">
+    <div class="story-art reveal" id="storyArt">
+      <span class="since"><span><small>Desde</small><b>1994</b></span></span>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Nossa história</span>
+      <h2 class="sec-title">Uma receita de família que virou tradição</h2>
+      <p>Tudo começou na cozinha de casa, com a receita de massa da nossa avó e um forno a lenha construído em um fim de semana. Os vizinhos provavam, voltavam e traziam amigos — e a pizzaria nasceu assim, de boca em boca.</p>
+      <p>Hoje seguimos fiéis ao básico: massa fermentada por 48 horas, molho feito diariamente, queijo de verdade e ingredientes escolhidos a dedo. Cada pizza é preparada na hora, como se fosse para a nossa própria mesa.</p>
+      <div class="stats">
+        <div class="stat"><b>30+</b><span>anos de tradição</span></div>
+        <div class="stat"><b>48h</b><span>de fermentação</span></div>
+        <div class="stat"><b>100%</b><span>feito na hora</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Contato</span>
+      <h2 class="sec-title">Fale com a gente</h2>
+      <p class="sec-sub">Dúvidas, encomendas para eventos ou sugestões? Estamos por aqui.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal"><div class="ico">📍</div><h3>Endereço</h3><p data-s="address">—</p></div>
+      <div class="c-card reveal"><div class="ico">📞</div><h3>Telefone / WhatsApp</h3><p data-s="phone">—</p><a class="btn btn-ghost btn-sm" data-tel href="#">Ligar agora</a></div>
+      <div class="c-card reveal"><div class="ico">🕕</div><h3>Horário</h3><p data-s="hours">—</p></div>
+    </div>
+    <div class="contact-cta">
+      <a class="btn btn-primary" data-wa href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <button class="btn btn-ghost" data-go="chat">Falar pelo chat do site</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot-in">
+    <span>© <span id="year"></span> <span data-store-name>Bella Massa Pizzaria</span>. Todos os direitos reservados.</span>
+    <span>Imagens meramente ilustrativas.</span>
+  </div>
+</footer>
+
+<!-- ============ CARRINHO ============ -->
+<div class="overlay" id="cartOverlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Carrinho" aria-hidden="true">
+  <div class="drawer-head"><h2>Seu carrinho</h2><button class="x-btn" id="cartClose" aria-label="Fechar carrinho">×</button></div>
+  <ul class="cart-list" id="cartItems"></ul>
+  <div class="cart-empty" id="cartEmpty"><div class="big">🍕</div><p><b>Seu carrinho está vazio.</b><br>Que tal escolher uma pizza?</p><button class="btn btn-primary" id="cartGoMenu">Ver cardápio</button></div>
+  <div class="drawer-foot" id="cartFoot">
+    <div class="sum-line"><span>Subtotal</span><b id="cartSubtotal">R$ 0,00</b></div>
+    <p class="note">A taxa de entrega é calculada na finalização.</p>
+    <button class="btn btn-primary btn-block" id="btnCheckout">Finalizar pedido</button>
+  </div>
+</aside>
+
+<!-- ============ LOGIN / CADASTRO ============ -->
+<div class="modal" id="authModal" hidden>
+  <div class="modal-box">
+    <button class="x-btn modal-x" data-close aria-label="Fechar">×</button>
+    <h2>Sua conta</h2>
+    <p class="sub">Entre para finalizar pedidos e ver seu histórico.</p>
+    <div class="tabs"><button id="tabLogin" class="active" type="button">Entrar</button><button id="tabSignup" type="button">Criar conta</button></div>
+    <form id="loginForm" novalidate>
+      <div class="fields">
+        <label class="f full">E-mail<input id="loginEmail" type="email" autocomplete="email" placeholder="voce@email.com"></label>
+        <label class="f full">Senha<input id="loginPass" type="password" autocomplete="current-password" placeholder="Sua senha"></label>
+      </div>
+      <button class="btn btn-primary btn-block" style="margin-top:16px">Entrar</button>
+    </form>
+    <form id="signupForm" novalidate hidden>
+      <div class="fields">
+        <label class="f full">Nome completo<input id="suName" autocomplete="name" placeholder="Seu nome"></label>
+        <label class="f">E-mail<input id="suEmail" type="email" autocomplete="email" placeholder="voce@email.com"></label>
+        <label class="f">Telefone<input id="suPhone" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"></label>
+        <label class="f full">Senha (mín. 6 caracteres)<input id="suPass" type="password" autocomplete="new-password" placeholder="Crie uma senha"></label>
+      </div>
+      <button class="btn btn-primary btn-block" style="margin-top:16px">Criar conta</button>
+    </form>
+    <p class="form-error" id="authError" hidden></p>
+  </div>
+</div>
+
+<!-- ============ MINHA CONTA + HISTÓRICO ============ -->
+<div class="modal" id="accountModal" hidden>
+  <div class="modal-box wide">
+    <button class="x-btn modal-x" data-close aria-label="Fechar">×</button>
+    <div class="acc-head">
+      <div class="avatar" id="accAvatar">?</div>
+      <div><h2 id="accName" style="margin:0">—</h2><small id="accEmail" style="color:var(--muted)"></small></div>
+    </div>
+    <p class="sub" id="accPhone" style="margin:0 0 18px"></p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between">
+      <button class="btn btn-primary btn-sm" id="btnAccHistory">Ver histórico de pedidos</button>
+      <button class="btn btn-ghost btn-sm" id="btnLogout">Sair da conta</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HISTÓRICO DE PEDIDOS ============ -->
+<div class="modal" id="historyModal" hidden>
+  <div class="modal-box wide">
+    <button class="x-btn modal-x" data-close aria-label="Fechar">×</button>
+    <h2>Histórico de pedidos</h2>
+    <p class="sub">Acompanhe seus pedidos e peça novamente com um toque.</p>
+    <div id="ordersList"></div>
+  </div>
+</div>
+
+<!-- ============ ESCOLHA DA BORDA ============ -->
+<div class="modal" id="edgeModal" hidden>
+  <div class="modal-box">
+    <button class="x-btn modal-x" data-close aria-label="Fechar">×</button>
+    <h2 id="edgeTitle">Escolha a borda</h2>
+    <p class="sub" id="edgeSub"></p>
+    <div class="opt-col" id="edgeOptions" role="radiogroup" aria-label="Borda"></div>
+    <button class="btn btn-primary btn-block" id="edgeAdd" style="margin-top:18px">Adicionar ao carrinho</button>
+  </div>
+</div>
+
+<!-- ============ FINALIZAR PEDIDO ============ -->
+<div class="modal" id="checkoutModal" data-noback hidden>
+  <div class="modal-box xl">
+    <button class="x-btn modal-x" data-close aria-label="Fechar">×</button>
+
+    <!-- Etapa 1: formulário -->
+    <div id="coStepForm">
+      <h2>Finalizar pedido</h2>
+      <p class="sub">Confira seus dados e escolha como receber e como pagar.</p>
+      <div class="co-grid">
+        <form id="checkoutForm" novalidate>
+          <section class="co-sec">
+            <h3><span>1</span> Como você quer receber?</h3>
+            <div class="opt-row">
+              <label class="opt"><input type="radio" name="mode" value="entrega" checked><span><b>🛵 Entrega</b><small>Levamos até você</small></span></label>
+              <label class="opt"><input type="radio" name="mode" value="retirada"><span><b>🏪 Retirada</b><small>Você busca na loja</small></span></label>
+            </div>
+          </section>
+
+          <section class="co-sec">
+            <h3><span>2</span> Seus dados</h3>
+            <div class="fields">
+              <label class="f full">Nome completo<input id="coName" autocomplete="name" placeholder="Seu nome"></label>
+              <label class="f full">Telefone / WhatsApp<input id="coPhone" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"></label>
+              <div class="addr-fields" id="addrFields">
+                <label class="f">Bairro<input id="coBairro" autocomplete="address-level3" placeholder="Ex.: Centro"></label>
+                <label class="f">Rua<input id="coRua" autocomplete="address-line1" placeholder="Ex.: Rua das Flores"></label>
+                <label class="f">Número da casa<input id="coNumero" inputmode="numeric" placeholder="Ex.: 123"></label>
+                <label class="f">Referência (opcional)<input id="coRef" placeholder="Ex.: portão azul"></label>
+              </div>
+            </div>
+          </section>
+
+          <section class="co-sec">
+            <h3><span>3</span> Pagamento</h3>
+            <div class="opt-row">
+              <label class="opt"><input type="radio" name="payWhen" value="site" checked><span><b>🔒 Pagar pelo site</b><small>Pix ou cartão de crédito</small></span></label>
+              <label class="opt"><input type="radio" name="payWhen" value="entrega"><span><b id="payWhenLabel">Pagar na entrega</b><small>Dinheiro, débito, crédito ou Pix</small></span></label>
+            </div>
+            <div class="method-row" id="methodRow" role="radiogroup" aria-label="Forma de pagamento"></div>
+
+            <div class="pay-box" id="pixNote" hidden><p class="hint" id="pixNoteText" style="margin:0"></p></div>
+
+            <div class="pay-box" id="cashBox" hidden>
+              <label class="f">Vai pagar com qual valor? (para calcularmos o troco)
+                <input id="coCashFor" inputmode="decimal" placeholder="Ex.: 100,00">
+              </label>
+              <label class="check"><input type="checkbox" id="coNoChange"> Não preciso de troco (valor exato)</label>
+              <div class="change-info" id="cashChange"></div>
+            </div>
+
+            <div class="pay-box" id="cardBox" hidden>
+              <div class="fields">
+                <label class="f full">Número do cartão<input id="cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000"></label>
+                <label class="f full">Nome impresso no cartão<input id="cardName" autocomplete="cc-name" placeholder="COMO ESTÁ NO CARTÃO"></label>
+                <label class="f">Validade<input id="cardExp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM/AA"></label>
+                <label class="f">CVV<input id="cardCvv" inputmode="numeric" autocomplete="cc-csc" placeholder="000" maxlength="4"></label>
+              </div>
+              <p class="hint">🔐 Os dados do cartão não são guardados pelo site.</p>
+            </div>
+          </section>
+
+          <section class="co-sec">
+            <h3><span>4</span> Observações do pedido</h3>
+            <label class="f">
+              <textarea id="coObs" rows="3" placeholder="Ex.: sem cebola, bem passada, interfone não funciona…"></textarea>
+            </label>
+          </section>
+        </form>
+
+        <aside class="co-summary">
+          <h3>Resumo</h3>
+          <div class="co-items" id="coItems"></div>
+          <div class="sum-line"><span>Subtotal</span><span id="coSub"></span></div>
+          <div class="sum-line" id="coFeeLine"><span>Taxa de entrega</span><span id="coFee"></span></div>
+          <div class="sum-total"><span>Total</span><span id="coTotal"></span></div>
+          <button class="btn btn-primary btn-block" id="btnConfirm" type="button">Confirmar pedido</button>
+          <p class="form-error" id="coError" hidden></p>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Etapa 2: Pix -->
+    <div id="coStepPix" hidden>
+      <h2>Pague com Pix</h2>
+      <p class="sub">Abra o app do seu banco, escolha Pix e aponte a câmera para o QR Code ou use o código copia e cola.</p>
+      <div class="pix-wrap">
+        <div class="pix-qr" id="pixQR"></div>
+        <div>
+          <p style="margin:0;color:var(--muted);font-weight:700">Valor a pagar</p>
+          <p class="pix-amount" id="pixAmount">R$ 0,00</p>
+          <p style="margin:6px 0 10px;font-weight:700">⏱ Expira em <span id="pixTimer">15:00</span></p>
+          <textarea class="pix-code" id="pixCode" readonly aria-label="Pix copia e cola"></textarea>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+            <button class="btn btn-ghost btn-sm" id="btnCopyPix" type="button">Copiar código</button>
+            <button class="btn btn-ghost btn-sm" id="btnPixBack" type="button">← Voltar</button>
+          </div>
+        </div>
+      </div>
+      <div class="demo-note">⚠ MODO DEMONSTRAÇÃO: este QR Code é ilustrativo. Ao integrar um provedor de pagamento, a confirmação será automática. Por enquanto, use o botão abaixo para simular o pagamento aprovado.</div>
+      <button class="btn btn-primary btn-block" id="btnPixPaid" type="button" style="margin-top:14px">Simular pagamento aprovado</button>
+    </div>
+
+    <!-- Etapa 3: confirmação -->
+    <div id="coStepDone" hidden>
+      <div class="done-head">
+        <div class="done-check">✓</div>
+        <h2 id="doneTitle">Pedido recebido!</h2>
+        <p class="sub" id="doneSub"></p>
+      </div>
+      <div id="doneBody"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <button class="btn btn-primary" data-go="orders">Acompanhar pedido</button>
+        <button class="btn btn-ghost" data-go="chat">Falar com a loja</button>
+        <button class="btn btn-ghost" data-go="menu">Voltar ao cardápio</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CHAT ============ -->
+<button class="chat-fab" id="chatFab" aria-label="Abrir chat com a pizzaria">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.600 7.100L4 20.500l1.500-4.600A8 8 0 1 1 21 12Z"/><circle cx="9" cy="12" r=".8" fill="currentColor"/><circle cx="12.500" cy="12" r=".8" fill="currentColor"/><circle cx="16" cy="12" r=".8" fill="currentColor"/></svg>
+  <span class="chat-badge" id="chatBadge" hidden>0</span>
+</button>
+<section class="chat-panel" id="chatPanel" aria-label="Chat com a pizzaria" hidden>
+  <header>
+    <div class="chat-av">🍕</div>
+    <div><b data-store-name>Bella Massa Pizzaria</b><small><i class="dot"></i> Atendimento online</small></div>
+    <button class="x-btn" id="chatClose" aria-label="Fechar chat">×</button>
+  </header>
+  <div class="chat-msgs" id="chatMsgs"></div>
+  <div class="chat-quick" id="chatQuick">
+    <button type="button" data-q="Qual o tempo de entrega?">Tempo de entrega</button>
+    <button type="button" data-q="Vocês aceitam Pix na entrega?">Pix na entrega?</button>
+    <button type="button" data-q="Como acompanho meu pedido?">Acompanhar pedido</button>
+  </div>
+  <form id="chatForm" autocomplete="off">
+    <input id="chatInput" placeholder="Digite sua mensagem…" aria-label="Mensagem" maxlength="500">
+    <button class="send" aria-label="Enviar">➤</button>
+  </form>
+</section>
+
+<div id="toasts" aria-live="polite"></div>
+
+<script src="js/shared.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
